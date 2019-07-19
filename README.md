@@ -8,13 +8,15 @@ clj -m cljs.main -co compiler-opts.cljs.edn -re node  --repl
 at the repl:
 
 ```
-(require 'exports')
+(require 'exports)
+
+; see that the println statement executes as expected... 
 
 exports/foo-ref
 
-```
-see that the println statement executes as expected, but the var 'foo-ref' has no value
+; but the var 'foo-ref' has no value
 
+```
 
 # Problem 2 - scoped packages do not work as global exports
 
