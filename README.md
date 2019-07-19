@@ -2,7 +2,7 @@
 # Problem 1 - global exports cannot be referenced after load
 
 ```
-clj -m cljs.main -co compiler-opts.cljs.edn -c exports  -re node  --repl
+clj -m cljs.main -co compiler-opts.cljs.edn -re node  --repl
 ```
 
 at the repl:
@@ -19,15 +19,24 @@ see that the println statement executes as expected, but the var 'foo-ref' has n
 # Problem 2 - scoped packages do not work as global exports
 
 ```
-clj -m cljs.main -co compiler-opts-scoped.cljs.edn -c scoped-exports  -re node  --repl
+clj -m cljs.main -co compiler-opts-scoped.cljs.edn -re node  --repl
 ```
 
 
 at the repl:
 
 ```
-(require 'scoped-exports')
+(require 'scoped-exports-global-exports)
+
+; => boom!
+
+(require 'scoped-exports-simple)
+
+js/Something
+
+; => yes, the scoped foreign lib has been loaded
+
+
 
 ```
 
-boom!

@@ -1,4 +1,4 @@
-(ns scoped-exports
+(ns scoped-exports-global-exports
   (:require ["@scoped/foreignlib" :as lib]))
 
 (def foo-ref (str "test: " lib/foo))
