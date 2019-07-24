@@ -14,8 +14,6 @@ at the repl:
 
 ; => boom!
 
-(require 'scoped-exports-simple)
-
 js/Something
 
 ; => yes, the scoped foreign lib has been loaded
