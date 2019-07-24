@@ -1,4 +1,0 @@
-{:foreign-libs [{:file     "src/my-foreign-lib.js"
-                 :provides ["my.foreignlib"]
-                 :global-exports { my.foreignlib Something}
-                 }]}

@@ -1,4 +1,10 @@
 {:foreign-libs [{:file     "src/my-foreign-lib.js"
                  :provides ["@scoped/foreignlib"]
                  :global-exports { "@scoped/foreignlib" Something}
-                 }]}
+                 }
+                ; include a non-scoped export
+                {:file     "src/my-foreign-lib.js"
+                 :provides ["my.foreignlib"]
+                 :global-exports { my.foreignlib Something}
+                 }
+                ]}
